@@ -93,7 +93,7 @@ button:focus{
          class="play d-flex flex-column justify-content-center align-items-center"
           style="margin-left: auto; margin-right:150px"
           on:click={play}>
-          <img src="../assets/play.svg"/>
+          <img src="../assets/play.svg" alt="flecha play" />
         </button>
         
         
