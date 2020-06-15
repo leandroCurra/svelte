@@ -2,7 +2,7 @@
 	import Container from './Container.svelte';
 	import Loader from './loader/Loader.svelte';
     import { fade } from 'svelte/transition';
-
+	import Video from './video/Video.svelte'
 	let loader = true;
 	setTimeout(() => {
 		loader= false;
@@ -16,7 +16,7 @@
 {#if !loader}
 <Container/>
 {/if}
-
+<Video/>
 <style>
 	main {
 		text-align: center;
