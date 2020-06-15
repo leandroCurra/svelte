@@ -10,7 +10,9 @@
     step += 1;
   }
   let endFirst = false;
-
+  	function handleMessage(event) {
+      endFirst = true;
+	}
 </script>
 
 <style>
@@ -49,7 +51,7 @@ button:focus{
       </div>
       {#if step=== 0}
       <div class="col-6">
-        <LottieContainer step="{0}" anim="{'anim5'}"  on:transitionEnd="{ endFirst = true }"/>
+        <LottieContainer step="{0}" anim="{'anim5'}"  on:message="{ handleMessage }"/>
       </div>
       {/if}
       {#if step=== 1 && endFirst}

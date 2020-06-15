@@ -2,17 +2,22 @@
   import { fly } from "svelte/transition";
   import { onMount } from "svelte";
   import Lottie from "lottie-web";
-  import { createEventDispatcher } from 'svelte';
+	import { createEventDispatcher } from 'svelte';
   let render = false;
   export let step = 0;
   export let anim;
-  const emiter = createEventDispatcher();
+	const dispatch = createEventDispatcher();
   let mount = false
   onMount(async () => {
     setTimeout(() => {
       mount = true;
     }, 900);
   })
+  function call(){
+	dispatch('message', {
+			text: 'Hello!'
+		});
+  }
 </script>
 {#if mount}
 <div class="w-100 h-100 overflow-hidden d-flex flex-column align-items-center justify-content-center">
@@ -31,11 +36,10 @@
           }}
          on:outroend= {
            ()=>{
-             emiter( 'transitionEnd', {
-               end: 'true'
-             })
+             console.log( 'transu' )
 
-           }
+          call();
+           }  
            
            
          } 
