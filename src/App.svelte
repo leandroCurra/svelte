@@ -4,19 +4,26 @@
     import { fade } from 'svelte/transition';
 	import Video from './video/Video.svelte'
 	let loader = true;
+	let play = false;
 	setTimeout(() => {
 		loader= false;
 	}, 2000);
 
+	function showVideo(){
+		play = true;
+	}
 
 </script>
 {#if loader}
 <Loader />
 {/if}
 {#if !loader}
-<Container/>
+<Container on:play={showVideo}/>
 {/if}
-<Video/>
+{#if play}
+<Video on:stop="{ ()=>{ play = false } }"/>
+
+{/if}
 <style>
 	main {
 		text-align: center;

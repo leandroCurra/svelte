@@ -13,17 +13,28 @@
       mount = true;
     }, 900);
   })
-  function call(){
+function call(){
 	dispatch('message', {
 			text: 'Hello!'
 		});
   }
 </script>
+<style>
+   .animation{
+          width:300px;
+          height:521px;
+    }
+  @media only screen and (max-width: 600px) {
+    .animation{
+          width:auto;
+          height:350px;
+    }
+  }
+</style>
 {#if mount}
 <div class="w-100 h-100 overflow-hidden d-flex flex-column align-items-center justify-content-center">
-        <div
+        <div class="animation"
           id="{'bm' + step}"
-          style="width:300px;height:521px"
           transition:fly={{ y: 600, duration: 1000 }}
           on:introstart={() => {
             const animation = Lottie.loadAnimation({

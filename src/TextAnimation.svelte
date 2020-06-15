@@ -21,8 +21,7 @@ p{
 </style>
 <div
   class="w-100 h-80 d-flex flex-column justify-content-center
-  align-items-center "
-  style="height:50vh">
+  align-items-center ">
   {#if step === 0 }
   <div class="w-80 ml-4 overflow-hidden"  transition:fly="{{ y: 600, duration: 600 }}" 
     on:outroend="{
