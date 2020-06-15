@@ -15,7 +15,7 @@
   })
 </script>
 {#if mount}
-<div class="w-100 h-100 overflow-hidden">
+<div class="w-100 h-100 overflow-hidden d-flex flex-column align-items-center justify-content-center">
         <div
           id="{'bm' + step}"
           style="width:300px;height:521px"

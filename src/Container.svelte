@@ -34,8 +34,8 @@ button:focus{
 </style>
 
 <div class="w-100 h-100 first" style="z-index:99" in:fade={{ duration: 1000 }}>
-  <div class="container-fluid">
-    <div class="row">
+  <div class="container-fluid h-100">
+    <div class="row h-100">
       <div
         class="col-6 d-flex flex-column justify-content-start align-items-center
         w-100 mt-4 overflow-hidden">
